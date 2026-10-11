@@ -26,9 +26,9 @@ public class AuthCookies {
 
     private ResponseCookie.ResponseCookieBuilder base(String value) {
         return ResponseCookie.from(NAME, value)
-                .httpOnly(true)
-                .secure(secure) // bật true khi chạy HTTPS (Railway)
-                .sameSite("Lax")
-                .path("/");
+        .httpOnly(true)
+        .secure(true)
+        .sameSite("None")
+        .path("/");
     }
 }
